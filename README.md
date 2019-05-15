@@ -14,7 +14,7 @@ For the not-chemical-structure images, I had to be a little more creative. I [fo
 
 ### Data Pre-Processing
 
-To make sure that the CNN didnn't pick up on any unimportant and subtle patterns to differentiate between the classes, I made all images as similar as possible. First, I removed all transparent background and replaced it with white background. Second, I made all images square by adding white padding where necessary. And third, I resized them to 128 by 128 pixels. This process was performed for all images used for training, and to all images used for testing.
+To make sure that the CNN didnn't pick up on any unimportant and subtle patterns to differentiate between the classes, I made all images as similar as possible. First, I removed all transparent background and replaced it with white background. Second, I made all images square by adding white padding where necessary. Third, I resized them to 128 by 128 pixels. And fourth, the intensity of the pixels was normalized to a range of zero to one (from a range of 0 to 255). This process was performed for all images used for training, and to all images used for testing.
 
 ### Cross-Validation
 
@@ -24,6 +24,16 @@ As of this writing, the model was only trained and tested once.
 
 ### Model Training
 
-To train this model, I followed the instructions and recommended architecture on [this blog](https://cv-tricks.com/tensorflow-tutorial/training-convolutional-neural-network-for-image-classification/), which consists of six layers: three convolutional layers, one flattened layer, and two fully connected layers - including the output layer. The shape of the filters for each convolutional layer is 3 (width) x 3 (height) x 3 (number of channels) and 32 filters for the first two layers and 64 for the third layer. The initial set of weights are randomly selected, but follow a normal distribution. These weights are adjusted during training until the cost function produces minimal results.
+To train this model, I followed the instructions and recommended architecture on [this blog](https://cv-tricks.com/tensorflow-tutorial/training-convolutional-neural-network-for-image-classification/), which consists of six layers: three convolutional layers, one flattened layer, and two fully connected layers - including the output layer. The shape of the filters for each convolutional layer is 3 (width), 3 (height), 3 (number of channels) and 32 filters for the first two layers and 64 for the third layer. The initial set of weights are randomly selected, but follow a normal distribution. These weights are adjusted during training until the cost function produces minimal results. The stride for the convolutional layers is set to one.
 
-The trained model is saved in a series of files in the root directory and in the tmp directory
+The trained model is saved in a series of files in the root directory and in the tmp directory.
+
+### Model Testing
+
+After the model was trained, it was tested on eight hundred images (400 positive, 400 negative) which the model had not seen before. The results are in the predictions_on_test.xlsx file, but the summary is as follows:
+
+| True Positive Rate (TPN)	      |       0.925 |
+| True Negative Rate (TNR)	      |       0.985 |
+| Positive Predictive Value (PPV) |	0.984042553 |
+| Negative Predictive Value	      | 0.929245283 |
+
