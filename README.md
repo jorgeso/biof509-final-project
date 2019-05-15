@@ -32,6 +32,8 @@ The trained model is saved in a series of files in the root directory and in the
 
 After the model was trained, it was tested on eight hundred images (400 positive, 400 negative) which the model had not seen before. The results are in the predictions_on_test.xlsx file, but the summary is as follows:
 
+| Measurement                     |    rate     |
+|---------------------------------|-------------|
 | True Positive Rate (TPN)	      |       0.925 |
 | True Negative Rate (TNR)	      |       0.985 |
 | Positive Predictive Value (PPV) |	0.984042553 |
