@@ -36,4 +36,3 @@ After the model was trained, it was tested on eight hundred images (400 positive
 | True Negative Rate (TNR)	      |       0.985 |
 | Positive Predictive Value (PPV) |	0.984042553 |
 | Negative Predictive Value	      | 0.929245283 |
-
