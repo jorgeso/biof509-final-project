@@ -4,7 +4,7 @@ This project was developed for a machine learning class at [FAES](https://faes.o
 
 ## Process
 
-Developing this model required several steps which included: acquiring data, data pre-processing, cross-validation, model training, model testing, and making predictions
+Developing this model required several steps which included: acquiring data, data pre-processing, cross-validation, model training, model testing.
 
 ### Acquiring Data
 
@@ -32,9 +32,15 @@ The trained model is saved in a series of files in the root directory and in the
 
 After the model was trained, it was tested on eight hundred images (400 positive, 400 negative) which the model had not seen before. The results are in the predictions_on_test.xlsx file, but the summary is as follows:
 
-| Measurement                     |    rate     |
+| Measurement                     |    Rate     |
 |---------------------------------|-------------|
 | True Positive Rate (TPN)	      |       0.925 |
 | True Negative Rate (TNR)	      |       0.985 |
 | Positive Predictive Value (PPV) |	0.984042553 |
-| Negative Predictive Value	      | 0.929245283 |
+| Negative Predictive Value (NPV) | 0.929245283 |
+
+The high rates in the first set of results, along with the high number of 1's in the "negative" column of the results table, may suggest that the model is  overfitting. In order to test this, different models will have to be trained with narrower networks and/or using other methods in general.  
+
+## Next Steps
+
+The obvious next step will be to have more rigorous cross validation to make sure the model is not overfitting. This will entail training new models using different CNN architectures and different methods altogether (like random forest). Also, because this model would be dealing with fairly simple images (compared to complex images like that of faces), it's probably best to add a pre-processing step to convert all images to gray scale, or it may even be very beneficial to change pixel values to binary based on intensity.
