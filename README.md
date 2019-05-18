@@ -7,6 +7,7 @@ This model can serve as an initial check for more complex services/algorigthms t
 Another use case is the extraction of chemical structures from publications. This model can be used along with OpenCV to process PDFs as images and identify the parts of it that are images of chemical structures. This way, extracted images can be passed to OSRA or Molvec in order to get their alternative formats.
 
 [Click here for steps to train your own model](train-steps.md)
+
 [Click here for steps to make predictions](train-steps.md)
 
 ## Process
