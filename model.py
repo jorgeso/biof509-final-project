@@ -10,7 +10,6 @@ import time
 from datetime import timedelta
 import math
 import random
-import numpy as np
 
 #Adding Seed so that random initialization is consistent
 from numpy.random import seed
