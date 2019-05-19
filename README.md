@@ -8,7 +8,7 @@ Another use case is the extraction of chemical structures from publications. Thi
 
 [Click here for steps to train your own model](train-steps.md)
 
-[Click here for steps to make predictions](train-steps.md)
+[Click here for steps to make predictions](predict-steps.md)
 
 ## Process
 
