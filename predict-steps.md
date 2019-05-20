@@ -19,7 +19,7 @@
 2. To classify several images:
     1. Move all images you want to classify to a certain directory
     2. Open console application
-    3. Type ```python predict.py -i path/do/directory-containing-images -r path/to/file-where-to-write-results.csv```
+    3. Type ```python batch-predict.py -i path/do/directory-containing-images -r path/to/file-where-to-write-results.csv```
     4. All results will be written to the file indicated in the -r argument with the following fields
         - File path
         - Negative probability
