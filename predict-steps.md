@@ -14,7 +14,7 @@
 1. To classify a single image:
     1. Open console application
     2. Type ```python predict.py path/to/image-file```
-    3. Model will return a numpy array of shape (1, 2)
+    3. Model will print a numpy array of shape (1, 2)
     4. The first number of the inner array is the probability that the image is not a chemical structure, the second number is probability that it is a chemical structure
 2. To classify several images:
     1. Move all images you want to classify to a certain directory
