@@ -2,7 +2,7 @@
 
 This project was developed for a machine learning class at [FAES](https://faes.org/), at the National Institutes of Health. It consists of developing a convolutional neural network (CNN) for binary image classification, with the purpose of classifying images into two classes: chemical scructure (positive), and not chemical structure (negative).
 
-This model can serve as an initial check for more complex services/algorigthms that convert images of chemical structures into [SMILES](https://en.wikipedia.org/wiki/Simplified_molecular-input_line-entry_system)'s and/or [Molfiles](https://en.wikipedia.org/wiki/Chemical_table_file#Molfile). Two examples are [OSRA](https://cactus.nci.nih.gov/cgi-bin/osra/index.cgi), and Molvec (which can be seen action when you copy-and-paste, or drag an image of a chemical structure into this editor https://ginas.ncats.nih.gov/ginas/app/structure). These services assume the image being passed is that of a chemical structure and perform really well then it is. But they don't perform well when they receive an image that's similar to a structure.
+This model can serve as an initial check for more complex services/algorigthms that convert images of chemical structures into [SMILES](https://en.wikipedia.org/wiki/Simplified_molecular-input_line-entry_system)'s and/or [Molfiles](https://en.wikipedia.org/wiki/Chemical_table_file#Molfile). Two examples are [OSRA](https://cactus.nci.nih.gov/cgi-bin/osra/index.cgi), and Molvec (which can be seen in action when you copy-and-paste, or drag an image of a chemical structure into this editor https://ginas.ncats.nih.gov/ginas/app/structure). These services assume the image being passed is that of a chemical structure and perform really well when it is. But they don't perform well when they receive an image that's similar to a structure.
 
 Another use case is the extraction of chemical structures from publications. This model can be used along with OpenCV to process PDFs as images and identify the parts of it that are images of chemical structures. This way, extracted images can be passed to OSRA or Molvec in order to get their alternative formats.
 
@@ -47,7 +47,7 @@ After the model was trained, it was tested on eight hundred images (400 positive
 | Positive Predictive Value (PPV) |	0.984042553 |
 | Negative Predictive Value (NPV) | 0.929245283 |
 
-The high rates in the first set of results, along with the high number of 1's in the "negative" column of the results table, may suggest that the model is  overfitting. In order to test this, different models will have to be trained with narrower networks and/or using other methods in general.  
+The high rates of accuracy in the first set of results, along with the high number of 1's in the "negative" column of the results table, may suggest that the model is  overfitting. In order to test this, different models will have to be trained with narrower networks and/or using other methods in general.  
 
 ## Next Steps
 
