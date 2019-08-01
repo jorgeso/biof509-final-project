@@ -4,8 +4,6 @@ This project was developed for a machine learning class at [FAES](https://faes.o
 
 This model can serve as an initial check for more complex services/algorigthms that convert images of chemical structures into [SMILES](https://en.wikipedia.org/wiki/Simplified_molecular-input_line-entry_system)'s and/or [Molfiles](https://en.wikipedia.org/wiki/Chemical_table_file#Molfile). Two examples are [OSRA](https://cactus.nci.nih.gov/cgi-bin/osra/index.cgi), and Molvec (which can be seen in action when you copy-and-paste, or drag an image of a chemical structure into this editor https://ginas.ncats.nih.gov/ginas/app/structure). These services assume the image being passed is that of a chemical structure and perform really well when it is. But they don't perform well when they receive an image that's similar to a structure.
 
-Another use case is the extraction of chemical structures from publications. This model can be used along with OpenCV to process PDFs as images and identify the parts of it that are images of chemical structures. This way, extracted images can be passed to OSRA or Molvec in order to get their alternative formats.
-
 [Click here for steps to train your own model](train-steps.md)
 
 [Click here for steps to make predictions](predict-steps.md)
